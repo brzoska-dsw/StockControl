@@ -11,7 +11,7 @@ Funkcje systemu:
 	
 	User:
 	- rejestracja
-	- przeglądanie tabel
+g	- przeglądanie tabel
 	- symulacja zmian planów prod.(możliwość cofnięcia zmian po analizie zapasów)
 	
 Encje:
