@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(path = "/apii")
-public class PartControler {
+@RequestMapping(path = "/api/part")
+public class PartController {
 
     private PartService partService;
 
-    @PostMapping("post")
+    @PostMapping("/post")
     public Part addRecord(@RequestBody Part part) {
         return partService.save(part);
     }
