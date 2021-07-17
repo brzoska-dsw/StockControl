@@ -1,7 +1,6 @@
 package com.pc.stockcontrol.entity;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
-import org.hibernate.annotations.Cascade;
 import javax.persistence.*;
 
 
@@ -22,11 +21,9 @@ public class User{
     private String surname;
 
     @Column(length=200, nullable=false, unique=false)
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+//    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
 
     @Column(length=50, nullable=false, unique=false)
     private String role;
-
-
 }

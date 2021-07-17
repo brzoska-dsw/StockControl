@@ -1,12 +1,10 @@
 package com.pc.stockcontrol.service;
 
 import com.pc.stockcontrol.entity.User;
-import com.pc.stockcontrol.exceptions.userNotFoundException;
+import com.pc.stockcontrol.exceptions.UserNotFoundException;
 import com.pc.stockcontrol.repository.UserRepository;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -22,12 +20,12 @@ public class UserService {
     public User findById(Long id) {
         return getUserRepository()
                 .findById(id)
-                .orElseThrow(() -> new userNotFoundException("user with id " + id + " not found"));
+                .orElseThrow(() -> new UserNotFoundException("user with id " + id + " not found"));
     }
 
     public User findByUserName(String name) {
         return userRepository.findByName(name)
-                .orElseThrow(() -> new userNotFoundException(name + " not found"));
+                .orElseThrow(() -> new UserNotFoundException(name + " not found"));
 
     }
 
@@ -35,17 +33,14 @@ public class UserService {
         return getUserRepository().findAll();
     }
 
-    public ResponseEntity<User> save(User newUser) {
+    public User save(User newUser) {
 
         User user = new User();
         user.setName(newUser.getName());
         user.setSurname(newUser.getName());
         user.setPassword(passwordEncoder.encode(newUser.getPassword()));
-        user.setRole(newUser.getRole());
-        userRepository.save(user);
-
-        return new ResponseEntity<>(user,
-                HttpStatus.CREATED);
+        user.setRole("ROLE_USER");
+        return userRepository.save(user);
     }
 
     public void deleteById(Long id) {
