@@ -1,5 +1,6 @@
 package com.pc.stockcontrol.controller;
 
+
 import com.pc.stockcontrol.entity.User;
 import com.pc.stockcontrol.exceptions.UserNotFoundException;
 import com.pc.stockcontrol.service.UserService;
@@ -9,13 +10,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 
 @Controller
-@RequestMapping("/users")
+@RequestMapping("/api/users")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "http://localhost:8080")
 public class UserController {
 
     private final UserService userService;
@@ -44,7 +45,7 @@ public class UserController {
     @PostMapping("/register")
     public String register(User user) {
         userService.save(user);
-        return "redirect:/api/all";
+        return "redirect:/api/unite";
     }
 
     @DeleteMapping("/{id}")

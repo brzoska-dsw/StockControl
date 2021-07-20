@@ -14,16 +14,16 @@ public class User{
     @Column(name = "user_id")
     private Long id;
 
-    @Column(length=50, nullable=false, unique=false)
+    @Column(length=50, nullable=false, unique=true)
     private String name;
 
-    @Column(length=50, nullable=false, unique=false)
+    @Column(length=50, nullable=false)
     private String surname;
 
-    @Column(length=200, nullable=false, unique=false)
+    @Column(length=200, nullable=false)
 //    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
 
-    @Column(length=50, nullable=false, unique=false)
+    @Column(length=50, nullable=false)
     private String role;
 }

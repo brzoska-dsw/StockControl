@@ -5,7 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.internal.build.AllowPrintStacktrace;
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.List;
 
 @NoArgsConstructor
@@ -15,6 +14,7 @@ import java.util.List;
 public class Unite {
 
     @Id
+    @Column(nullable = false)
     private String uniteNo;
     private String shortNo;
 

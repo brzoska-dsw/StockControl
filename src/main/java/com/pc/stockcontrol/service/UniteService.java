@@ -2,9 +2,7 @@ package com.pc.stockcontrol.service;
 
 import com.pc.stockcontrol.entity.Unite;
 import com.pc.stockcontrol.repository.UniteRepo;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -23,6 +21,7 @@ public class UniteService {
     }
 
     public List<Unite> findAll() {
+
         return uniteRepo.findAll();
     }
 

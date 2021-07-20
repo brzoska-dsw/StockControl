@@ -1,14 +1,13 @@
 package com.pc.stockcontrol.controller;
 
+
 import com.pc.stockcontrol.entity.Part;
 import com.pc.stockcontrol.service.PartService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(path = "/api/part")
+@CrossOrigin(origins = "http://localhost:8080")
 public class PartController {
 
     private PartService partService;

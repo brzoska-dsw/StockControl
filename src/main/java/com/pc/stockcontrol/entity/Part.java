@@ -3,10 +3,8 @@ package com.pc.stockcontrol.entity;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.internal.build.AllowPrintStacktrace;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+
+import javax.persistence.*;
 
 @NoArgsConstructor
 @AllowPrintStacktrace
@@ -14,9 +12,9 @@ import javax.persistence.Id;
 @Entity
 public class Part {
 
+
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Column(nullable = false)
     private String partNo;
     private String kanban;
 
