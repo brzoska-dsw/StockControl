@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Created-By: IntelliJ IDEA
+Built-By: brzoska
+Build-Jdk: Amazon Corretto version 15.0.2
+Implementation-Title: stockControl
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.pc
+Main-Class: ${start-class}
+

@@ -8,11 +8,11 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class UniteService {
+public class UnitService {
 
     public UniteRepo uniteRepo;
 
-    public UniteService(UniteRepo uniteRepo) {
+    public UnitService(UniteRepo uniteRepo) {
         this.uniteRepo = uniteRepo;
     }
 
@@ -25,8 +25,8 @@ public class UniteService {
         return uniteRepo.findAll();
     }
 
-    public Unite save(Unite unite) {
-        return uniteRepo.save(unite);
+    public void save(Unite unite) {
+         uniteRepo.save(unite);
     }
 
     public void deleteByUniteNo(String uniteNo) {
