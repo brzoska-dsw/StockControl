@@ -36,11 +36,11 @@ public class PartService {
         return partRepo.save(part);
     }
 
-    public Optional<Part> findById(Long id) {
+    public Optional<Part> findById(String id) {
         return partRepo.findById(id);
     }
 
-    public void deleteById(long id) {
+    public void deleteById(String id) {
         partRepo.deleteById(id);
     }
 

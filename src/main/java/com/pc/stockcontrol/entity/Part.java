@@ -14,7 +14,7 @@ import java.util.List;
 public class Part {
 
     @Id
-//    @Column(nullable = false)
+    @Column(nullable = false)
     private String partNo;
     private String kanban;
 

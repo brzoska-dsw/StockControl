@@ -23,7 +23,7 @@ public class UniteController {
         this.unitService = unitsService;
     }
 
-    @GetMapping("/unite")
+    @GetMapping("/unit")
     public List<UnitDTO> getAll() {
 
         return unitService.findAll()
@@ -32,7 +32,7 @@ public class UniteController {
                 .collect(Collectors.toList());
     }
 
-    @PostMapping("/unite/post")
+    @PostMapping("/unit/post")
     public void  addRecord(@RequestBody final Unite unite) {
          unitService.save(unite);
 

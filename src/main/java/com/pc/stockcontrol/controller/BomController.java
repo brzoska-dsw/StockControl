@@ -20,6 +20,7 @@ public class BomController {
     @GetMapping("/bom")
     public List<Bom> findAll(){
         return bomService.findAll();
+//        return bomService.BomService();
     }
 
 }

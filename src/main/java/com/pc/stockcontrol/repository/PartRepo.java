@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface PartRepo extends JpaRepository<Part,Long> {
+public interface PartRepo extends JpaRepository<Part,String> {
 
     @Query ("select p from Part p join FETCH p.bom")
     List<Part> findAllFetchBom();
