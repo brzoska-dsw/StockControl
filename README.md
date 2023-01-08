@@ -1,3 +1,13 @@
+INSTRUKCJA URUCHOMIENIA:
+1. Sklonuj repozytorium
+2. Uruchom backend (domyślnie na porcie 8080) -> klasa StockControlApplication oznaczona jako @SpringBootApplication
+3. Uruchom frontend (domyślnie na porcie 3000)
+3a. Przejdź w konsoli do src/main/webApp/reactpart
+3b. npm install
+3c. npm start
+4. Aplikacja uruchomiona (backend na porcie 8080, frontend na porcie 3000)
+5. Do pełnej funkcjonalności potrzebna jest oczywiście baza danych zdefiniowana w application.properties
+
 PROJECT: 
 StockControl - aplikacja do kontrolowania zapasów materiałowych
 
