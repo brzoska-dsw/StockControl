@@ -31,8 +31,7 @@ const Units = () => {
       },
       body: JSON.stringify(item)
     })
-      .then(data => data.json())
-  }
+  };
 
   useEffect(() => {
     let mounted = true;
@@ -96,6 +95,7 @@ const Units = () => {
             </Col>
           </Row>
           <Button variant="success" type="submit" >zapisz</Button>
+          <p>Po zapisaniu odśwież stronę, aby zobaczyć zmiany</p>
         </Form>
       </Container>
       <br />

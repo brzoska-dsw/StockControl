@@ -91,6 +91,7 @@ const Parts = () => {
           <Button variant="success" type="submit">
             zapisz
           </Button>
+          <p>Po zapisaniu odśwież stronę, aby zobaczyć zmiany</p>
         </Form>
       </Container>
       <br />
